@@ -1,20 +1,35 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import * as React from 'react';
+import { SafeAreaView, StyleSheet} from 'react-native';
+import Navigation from './src/navigation';
+import NavigationTabFood from './src/screens/Office/AlloFood/NavigationTabFood';
+import Amplify from "@aws-amplify/core";
+import config from './src/aws-exports';
+import interfaceClient from './src/screens/Office/AlloLivreur/Interface/InterfaceClient'
 
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
+Amplify.configure(config);
+
+const App = () => {
+ 
+	return (
+    <SafeAreaView style={styles.root}>
+			<Navigation />
+			{/* <NavigationTabFood /> */}
+      {/* <interfaceClient/> */}
+    </SafeAreaView>
+		);
+
 }
 
+
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  root : {
+    flex:1,
+    backgroundColor : '#F9F8FC',
   },
 });
+
+export default App; 
+
+
+
+// g$SQXO*MFAPl5cB09r
