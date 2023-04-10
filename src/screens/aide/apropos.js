@@ -1,14 +1,14 @@
 import React from 'react';
-import { Text, View } 
+import {Text, View, StyleSheet} from 'react-native';
 
 export default function Apropos() {
     return (
         <View style={styles.container}>
             <Text>
-                Allô Group est la solution à vos besoins. Elle est l’application qui de référence de l’Afrique.
+                Allô Group est la solution à vos besoins. Elle est l’application qui de référence de l’Afrique. Elle vous permet :
             </Text>
             <Text>
-                Elle vous permet :
+               
             </Text>
             <Text>
                 -	De vous déplacer en commandant des zémidjans et des taxis ou que vous soyez et ce depuis votre téléphone
@@ -31,4 +31,4 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
     },
-)}
+})

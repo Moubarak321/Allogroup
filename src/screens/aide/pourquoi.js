@@ -1,7 +1,7 @@
 import React from 'react';
 import {Text, View, StyleSheet} from 'react-native';
 
-export default function NosAtouts() {
+export default function Pourquoi() {
   return (
     <View>
         <Text>Pourquoi choisir Allô Group ? </Text>

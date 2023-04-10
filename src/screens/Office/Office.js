@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 import { Button } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
+import Carousel from 'react-native-snap-carousel';
 
 
 
@@ -25,19 +26,25 @@ const Office = () => {
 
 	// const Stack = createStackNavigator();
 
-
+	const images = [
+		{ uri: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80' },
+		{ uri: 'https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=812&q=80' },
+		{ uri: 'https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1396&q=80' },
+		{ uri: 'https://images.unsplash.com/photo-1560769629-975ec94e6a86?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80' },
+		{ uri: 'https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=725&q=80' },
+	  ];
 
 	return (
-		
+
 		<SafeAreaView style={styles.root}>
-			
+
 			<ScrollView showsVerticalScrollIndicator={true} >
 
 
 
 				<View style={styles.border}>
 					<ScrollView horizontal={true}>
-				
+
 						<View style={{ flex: 0.5, paddingLeft: 10 }}>
 							<Text style={{ fontSize: 15, color: 'white', fontWeight: 'bold' }}>PorteFeuille</Text>
 							<Text style={{ fontSize: 15, color: 'white', fontWeight: 'bold' }}>0 F </Text>
@@ -48,7 +55,7 @@ const Office = () => {
 
 				<View style={styles.services}>
 
-				
+
 
 					<ScrollView horizontal={true}>
 
@@ -70,7 +77,7 @@ const Office = () => {
 						</TouchableOpacity>
 
 
-						
+
 
 
 
@@ -126,15 +133,24 @@ const Office = () => {
 
 
 
-					<Image
+					{/* <Image
 						source={require('../../../assets/images/aliment0.jpg')}
 						style={{ width: '100%', height: 300 }}
 						resizeMode='contain'
+					/> */}
+					<Carousel
+						data={images}
+						renderItem={({ item }) => (
+							<Image source={item} style={{ width: '100%', height: 300 }} />
+						)}
+						sliderWidth={300}
+						itemWidth={200}
+						loop={true}
 					/>
 				</View>
 
 			</ScrollView>
-		 </SafeAreaView>
+		</SafeAreaView>
 	)
 };
 

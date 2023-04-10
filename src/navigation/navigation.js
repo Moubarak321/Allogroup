@@ -21,6 +21,22 @@ import { createStackNavigator } from '@react-navigation/stack';
 import PresentationCoursier from '../screens/Office/AlloLivreur/PresentationCoursier';
 import AttenteClient from '../screens/Office/AlloLivreur/attenteClient/attenteClient';
 import InscriptionFastGerant from '../screens/Office/AlloFood/Gerant/inscriptionFastGerant';
+
+import Apropos from '../screens/aide/apropos';
+import AutreAddresseDelivraison from '../screens/aide/autreadedressedelivraison';
+import Autredesti from '../screens/aide/autredesti';
+import InscriptionFAQ from '../screens/aide/inscription';
+import Paiements from '../screens/aide/paiements';
+import Parrain from '../screens/aide/parrain';
+import Platsendommages from '../screens/aide/platsendommages';
+import Pourquoi from '../screens/aide/pourquoi';
+import Receptiondecolis from '../screens/aide/receptiondecolis';
+import Receptionplatdifferent from '../screens/aide/receptionplatdifferent';
+import Reserver from '../screens/aide/reserver';
+import Resolutionretard from '../screens/aide/resolutionretard';
+import Retardconsiderable from '../screens/aide/retardconsiderable';
+import Typesdepaiement from '../screens/aide/typesdepaiement';
+
 const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
@@ -64,15 +80,72 @@ function StackScreen() {
 				headerShown: false,
 			}} name='Food' component={Food} />
 
-			<Stack.Screen options={{headerShown: false,}} name='SelectionLieuRetrait' component={SelectionLieuRetrait} />
-			<Stack.Screen options={{headerShown: false,}} name='PresentationCoursier' component={PresentationCoursier} />
-			<Stack.Screen options={{headerShown: false,}} name='AttenteClient' component={AttenteClient} />
-			<Stack.Screen options={{headerShown: false,}} name='inscriptionLivreur' component={inscriptionLivreur}  />
-			<Stack.Screen options={{headerShown: false,}} name='InscriptionFastGerant' component={InscriptionFastGerant} />
-			
-			
-			
-		
+			<Stack.Screen options={{ headerShown: false, }} name='SelectionLieuRetrait' component={SelectionLieuRetrait} />
+			<Stack.Screen options={{ headerShown: false, }} name='PresentationCoursier' component={PresentationCoursier} />
+			<Stack.Screen options={{ headerShown: false, }} name='AttenteClient' component={AttenteClient} />
+			<Stack.Screen options={{ headerShown: false, }} name='inscriptionLivreur' component={inscriptionLivreur} />
+			<Stack.Screen options={{ headerShown: false, }} name='InscriptionFastGerant' component={InscriptionFastGerant} />
+
+
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='Apropos' component={Apropos} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='AutreAddresseDelivraison' component={AutreAddresseDelivraison} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='Autredesti' component={Autredesti} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='InscriptionFAQ' component={InscriptionFAQ} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='Paiements' component={Paiements} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='Parrain' component={Parrain} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='Platsendommages' component={Platsendommages} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='Pourquoi' component={Pourquoi} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='Receptiondecolis' component={Receptiondecolis} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='ReceptionPlatdifferent' component={Receptionplatdifferent} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='Reserver' component={Reserver} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='Resolutionretard' component={Resolutionretard} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='Retardconsiderable' component={Retardconsiderable} />
+
+			<Stack.Screen options={{
+				headerShown: false,
+			}} name='Typesdepaiement' component={Typesdepaiement} />
+
+
+
 
 		</Stack.Navigator>
 	)
@@ -123,4 +196,3 @@ const NavigationTab = () => {
 }
 
 export default NavigationTab;
-

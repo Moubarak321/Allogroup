@@ -60,7 +60,7 @@ const SignInScreen = () => {
 
 				<CustomInput 
 					name='username'
-					placeholder={'Votre identifiant'} 
+					placeholder={'Nom d\'utilisteur'} 
 					control={control}
 					rules = {{
 						required : 'Votre identifant est obligatoire',

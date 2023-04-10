@@ -30,6 +30,23 @@ import navigationTabFood from '../screens/Office/AlloFood/NavigationTabFood';
 import AttenteClient from '../screens/Office/AlloLivreur/attenteClient/attenteClient';
 import { Auth, Hub } from '@aws-amplify/core';
 
+
+import Apropos from '../screens/aide/apropos';
+import AutreAddresseDelivraison from '../screens/aide/autreadedressedelivraison';
+import Autredesti from '../screens/aide/autredesti';
+import InscriptionFAQ from '../screens/aide/inscription';
+import Paiements from '../screens/aide/paiements';
+import Parrain from '../screens/aide/parrain';
+import Platsendommages from '../screens/aide/platsendommages';
+import Pourquoi from '../screens/aide/pourquoi';
+import Receptiondecolis from '../screens/aide/receptiondecolis';
+import Receptionplatdifferent from '../screens/aide/receptionplatdifferent';
+import Reserver from '../screens/aide/reserver';
+import Resolutionretard from '../screens/aide/resolutionretard';
+import Retardconsiderable from '../screens/aide/retardconsiderable';
+import Typesdepaiement from '../screens/aide/typesdepaiement';
+
+
 const Stack = createNativeStackNavigator();
 
 const Navigation = () => {
@@ -107,6 +124,21 @@ const Navigation = () => {
 					<Stack.Screen name='PresentationCoursier' component={PresentationCoursier}/>
 					<Stack.Screen name='AttenteClient' component={AttenteClient}/>
 					<Stack.Screen name='InscriptionFastGerant' component={InscriptionFastGerant}/>
+
+					<Stack.Screen name='AutreAddresseDelivraison' component={AutreAddresseDelivraison}/> 
+					<Stack.Screen name='Apropos' component={Apropos}/> 
+					<Stack.Screen name='Autredesti' component={Autredesti}/> 
+					<Stack.Screen name='Paiements' component={Paiements}/> 
+					<Stack.Screen name='InscriptionFAQ' component={InscriptionFAQ}/> 
+					<Stack.Screen name='Platsendommages' component={Platsendommages}/> 
+					<Stack.Screen name='Pourquoi' component={Pourquoi}/>
+					<Stack.Screen name='Receptiondecolis' component={Receptiondecolis}/> 
+					<Stack.Screen name='Receptionplatdifferent' component={Receptionplatdifferent}/> 
+					<Stack.Screen name='Reserver' component={Reserver}/> 
+					<Stack.Screen name='Typesdepaiement' component={Typesdepaiement}/> 
+					<Stack.Screen name='Retardconsiderable' component={Retardconsiderable}/> 
+					<Stack.Screen name='Parrain' component={Parrain}/> 
+					<Stack.Screen name='Resolutionretard' component={Resolutionretard}/>
 				</>
 				)}
 				
@@ -122,4 +154,3 @@ const Navigation = () => {
 }
 
 export default Navigation;
-
